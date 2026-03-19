@@ -12,8 +12,8 @@ from dewalt.tool_families.base import StatCard
 from .config import APP_LOCATION_ID
 from .context import DashboardContext
 
-GITHUB_REPO_URL = "https://github.com/perfectly-preserved-pie/dewalt"
-CONTACT_EMAIL = "hello@example.com"
+GITHUB_REPO_URL = "https://github.com/perfectly-preserved-pie/tooldex"
+CONTACT_EMAIL = "hey@automateordie.dev"
 
 
 @dataclass(frozen=True)
