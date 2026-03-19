@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools>=77.0.3"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "dewalt-compare"
+version = "0.1.0"
+description = "Dash AG Grid comparison tool for Dewalt tools."
+readme = "README.md"
+requires-python = ">=3.12"
+license = "MIT"
+license-files = ["LICENSE"]
+dependencies = [
+    "beautifulsoup4>=4.12,<5",
+    "dash==4.0.0",
+    "dash-ag-grid==33.3.3",
+    "dash-bootstrap-components==2.0.4",
+    "dash-iconify>=0.1.2,<1",
+    "gunicorn==25.1.0",
+    "requests>=2.32,<3",
+]
+
+[tool.setuptools.packages.find]
+include = ["dewalt*"]

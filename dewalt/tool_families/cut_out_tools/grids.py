@@ -1,0 +1,94 @@
+from __future__ import annotations
+
+from dewalt.tool_families.base import ColumnDef
+from dewalt.ui.grid_helpers import boolean_column, categorical_column, number_column, text_column
+
+
+def build_master_column_defs() -> list[ColumnDef]:
+    """Build the master-grid column definitions for cut-out tools.
+
+    Args:
+        None.
+
+    Returns:
+        A list of grouped AG Grid column definitions for cut-out tools.
+    """
+    identity_column_defs = [
+        text_column(
+            "sku",
+            "SKU",
+            pinned="left",
+            minWidth=120,
+        ),
+        text_column(
+            "title",
+            "Model",
+            flex=2.6,
+            minWidth=340,
+            tooltipField="title",
+            wrapText=True,
+            autoHeight=True,
+        ),
+    ]
+
+    spec_column_defs = [
+        categorical_column("power_source", "Power", minWidth=120),
+        categorical_column("series_display", "Series", minWidth=170),
+        categorical_column("voltage_system", "Voltage", minWidth=130),
+        categorical_column("tool_type", "Type", minWidth=140),
+        categorical_column("collet_size_display", "Collet", minWidth=145),
+        categorical_column("wheel_diameter_display", "Wheel", minWidth=130),
+        number_column(
+            "max_cut_depth_in",
+            "Cut Depth",
+            "params.value == null ? '-' : `${params.value} in.`",
+            minWidth=125,
+        ),
+        number_column(
+            "rpm_max",
+            "Max RPM",
+            "params.value == null ? '-' : params.value.toLocaleString()",
+            minWidth=125,
+        ),
+        number_column(
+            "max_watts_out",
+            "MWO",
+            "params.value == null ? '-' : `${params.value.toLocaleString()} W`",
+            minWidth=125,
+        ),
+        number_column(
+            "tool_length_in",
+            "Tool L",
+            "params.value == null ? '-' : `${params.value} in.`",
+            minWidth=120,
+        ),
+        number_column(
+            "weight_lbs",
+            "Weight",
+            "params.value == null ? '-' : `${params.value} lbs`",
+            minWidth=120,
+        ),
+    ]
+
+    feature_column_defs = [
+        boolean_column("brushless", "Brushless", minWidth=120),
+        boolean_column("led_light", "LED Light", minWidth=120),
+        boolean_column("tool_free_bit_change", "Tool-Free Change", minWidth=155),
+        boolean_column("axis_lock", "Axis Lock", minWidth=120),
+        boolean_column("dust_extraction", "Dust Extraction", minWidth=150),
+        boolean_column("tool_connect_ready", "Tool Connect", minWidth=145),
+    ]
+
+    return [
+        *identity_column_defs,
+        {
+            "headerName": "Specs",
+            "marryChildren": True,
+            "children": spec_column_defs,
+        },
+        {
+            "headerName": "Features",
+            "marryChildren": True,
+            "children": feature_column_defs,
+        },
+    ]
