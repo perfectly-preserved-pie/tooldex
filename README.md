@@ -39,4 +39,5 @@ uv run python3 -m dewalt.tool_families.circular_saws.scrape # Scrapes just circu
 ## Contributing
 
 Please open an issue or submit a pull request with improvements, bug fixes, or new features.
+
 Alternatively, you can email hey@automateordie.dev with suggestions or feedback.
