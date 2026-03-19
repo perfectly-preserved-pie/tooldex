@@ -229,8 +229,8 @@ def build_layout(sections: Sequence[DashboardSection]) -> dbc.Container:
                 [
                     html.Div(
                         [
-                            html.P("Unofficial DEWALT TOOL INDEX", className="eyebrow"),
-                            html.H1("DEWALT Compare", className="hero-title"),
+                            html.P("POWER TOOL INDEX", className="eyebrow"),
+                            html.H1("Tool Compare", className="hero-title"),
                             html.P(
                                 (
                                     f"Compare DEWALT {format_family_list(family_labels)} in one place. "
