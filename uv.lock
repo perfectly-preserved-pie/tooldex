@@ -164,7 +164,7 @@ wheels = [
 ]
 
 [[package]]
-name = "dewalt-compare"
+name = "tooldex"
 version = "0.1.0"
 source = { editable = "." }
 dependencies = [

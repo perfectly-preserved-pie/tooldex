@@ -3,9 +3,9 @@ requires = ["setuptools>=77.0.3"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "dewalt-compare"
+name = "Tooldex"
 version = "0.1.0"
-description = "Dash AG Grid comparison tool for Dewalt tools."
+description = "Dash AG Grid comparison tool for power tools."
 readme = "README.md"
 requires-python = ">=3.12"
 license = "MIT"
