@@ -1,4 +1,4 @@
-# DEWALT Tool Table
+# (Unofficial) DEWALT Tool Table
 
 ## This project is not affiliated with, endorsed by, or sponsored by DEWALT, Stanley Black & Decker, or any of their affiliates.
 
