@@ -32,6 +32,10 @@ from dewalt.ui import (
 )
 
 
+PLAUSIBLE_SCRIPT = (
+    "https://plausible.automateordie.io/js/pa-TrkoWDJR2NlSLfwFjQYX_.js"
+)
+
 FAMILIES = (
     ANGLE_GRINDER_FAMILY,
     DRILL_DRIVER_FAMILY,
@@ -69,6 +73,7 @@ app = Dash(
     title="Tool Compare",
     description="An interactive website for browsing and comparing power tools across multiple categories.",
     external_stylesheets=[dbc.themes.BOOTSTRAP],
+    external_scripts=[{"src": PLAUSIBLE_SCRIPT, "async": True}],
 )
 server = app.server
 
