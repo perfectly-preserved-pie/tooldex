@@ -2,6 +2,8 @@
 
 ## This project is not affiliated with, endorsed by, or sponsored by DEWALT, Stanley Black & Decker, or any of their affiliates.
 
+[![Build and Publish](https://github.com/perfectly-preserved-pie/tooldex/actions/workflows/build_and_push.yml/badge.svg)](https://github.com/perfectly-preserved-pie/tooldex/actions/workflows/build_and_push.yml)
+
 DeWalt's website is trash and comically slow to browse and it PISSES me off. So I wanted to build a website that would allow me to quickly compare tools across categories without having to click through dozens of slow pages.
 
 Anyways, this website allows users to filter, sort, and compare tools based on factual attributes such as voltage, dimensions, runtime-related specs, and other structured fields.
